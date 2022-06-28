@@ -3,12 +3,26 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "homepage": "https://github.com/sa2rn/geoname-countries",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sa2rn/geoname-countries.git"
+  },
+  "keywords": [
+    "geoname",
+    "countries",
+    "currencies",
+    "country info"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "clean": "rimraf dist/*",
     "lint": "eslint . --ext .js,.ts",
     "prebuild": "npm run clean",
     "build": "tsc -p tsconfig.build.json",
-    "prepublish": "npm run build",
+    "prepublishOnly": "npm run build",
     "update-countries": "ts-node scripts/update-countries.ts"
   },
   "license": "ISC",
