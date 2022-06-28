@@ -5,11 +5,11 @@ import storage from './storage';
 const countries = storage.read();
 
 export default {
-  find(query: any, options: Partial<Options> | undefined) {
+  find(query: any, options?: Partial<Options>) {
     return countries.filter(sift(query, options));
   },
 
-  findOne(query: any, options: any) {
+  findOne(query: any, options?: Partial<Options>) {
     return this.find(query, options)[0];
   },
 };
