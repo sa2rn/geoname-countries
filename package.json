@@ -23,7 +23,7 @@
     "prebuild": "npm run clean",
     "build": "tsc -p tsconfig.build.json",
     "prepublishOnly": "npm run build",
-    "update-countries": "ts-node scripts/update-countries.ts"
+    "update-countries": "ts-node src/scripts/update-countries.ts"
   },
   "license": "ISC",
   "devDependencies": {
@@ -41,7 +41,6 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
-    "find-root": "^1.1.0",
     "sift": "^16.0.0"
   }
 }

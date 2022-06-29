@@ -1,10 +1,9 @@
 import { join, dirname } from 'path';
 import { readFileSync, writeFileSync, mkdirSync } from 'fs';
-import findRoot from 'find-root';
 import { Country } from './types';
 
 export const ENCODING = 'utf8';
-export const DEST = join(findRoot('./'), 'data/countries.json');
+export const DEST = join(__dirname, '../data/countries.json');
 
 export default {
   dump(data: Country[]) {
